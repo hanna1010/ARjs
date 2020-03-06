@@ -17,6 +17,14 @@ function staticLoadPlaces() {
               lng: 126.946923, // change here longitude if using static data
             }
         },
+
+        {
+            name: "Your place name",
+            location: {
+              lat: 37.571218, // change here latitude if using static data
+              lng: 126.946924, // change here longitude if using static data
+            }
+        }
     ];
 }
 
