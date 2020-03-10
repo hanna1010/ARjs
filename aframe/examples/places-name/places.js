@@ -1,4 +1,3 @@
-
 window.onload = () => {
     let method = 'static';
 
@@ -29,46 +28,24 @@ window.onload = () => {
     }
 };
 
-
 function staticLoadPlaces() {
     return [
         {
-            name: "House",
+            name: "Your place name",
             location: {
-              lat: 37.571217, // change here latitude if using static data
-              lng: 126.946923, // change here longitude if using static data
+                lat: 44.493271, // change here latitude if using static data
+                lng: 11.326040, // change here longitude if using static data
             }
         },
     ];
-    // CORS Proxy to avoid CORS problems
-    const corsProxy = 'https://cors-anywhere.herokuapp.com/';
-
-    // Foursquare API (limit param: number of maximum places to fetch)
-    const endpoint = `${corsProxy}https://api.foursquare.com/v2/venues/search?intent=checkin
-        &ll=${position.latitude},${position.longitude}
-        &radius=${params.radius}
-        &client_id=${params.clientId}
-        &client_secret=${params.clientSecret}
-        &limit=30
-        &v=${params.version}`;
-    return fetch(endpoint)
-        .then((res) => {
-            return res.json()
-                .then((resp) => {
-                    return resp.response.venues;
-                })
-        })
-        .catch((err) => {
-            console.error('Error with places API', err);
-        })
 }
 
 // getting places from REST APIs
 function dynamicLoadPlaces(position) {
     let params = {
         radius: 300,    // search places not farther than this value (in meters)
-        clientId: 'JCFMN5WPOPIAQH5X43WXTNX4BOAZD1NWQVLV445FSRV2VDFB',
-        clientSecret: '3Y1U5G4BSZ31VR2NJZNXT4EIFEANFBRULOEEUQNBQR3NM4MJ',
+        clientId: 'HZIJGI4COHQ4AI45QXKCDFJWFJ1SFHYDFCCWKPIJDWHLVQVZ',
+        clientSecret: '',
         version: '20300101',    // foursquare versioning, required but unuseful for this demo
     };
 
