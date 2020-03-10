@@ -14,16 +14,16 @@ function staticLoadPlaces() {
       {
           name: "house",
           location: {
-              lat: 37.571217, // change here latitude if using static data
-              lng: 126.946923, // change here longitude if using static data
+              lat: 37.33594, // change here latitude if using static data
+              lng: 126.56534, // change here longitude if using static data
           }
       },
 
       {
         name: "home",
         location: {
-            lat: 37.571218, // change here latitude if using static data
-            lng: 126.946923, // change here longitude if using static data
+            lat: 37.33593, // change here latitude if using static data
+            lng: 126.56531, // change here longitude if using static data
         }
       }
   ];
